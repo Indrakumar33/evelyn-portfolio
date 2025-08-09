@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evelyn Henry - Senior Regulatory Affairs Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #e0e7ed);
+            color: #333;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            /* Adjust padding for smaller screens, ensure it's not too tight */
+            padding: 1.5rem; /* Default for mobile */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .container {
+                padding: 2rem; /* Restore larger padding for tablets and desktops */
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1.0s; }
+        .delay-6 { animation-delay: 1.2s; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animated-gradient {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f7d794);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .skill-item {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-left: 5px solid;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            /* Ensure sufficient padding for touch targets on mobile */
+            min-height: 120px; /* Give some minimum height for consistency */
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .skill-item.blue { border-color: #45b7d1; }
+        .skill-item.green { border-color: #4ecdc4; }
+        .skill-item.red { border-color: #ff6b6b; }
+        .skill-item.yellow { border-color: #f7d794; }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 2rem;
+            /* Adjust padding for smaller screens */
+            padding-left: 20px; /* Smaller left padding for mobile */
+        }
+        @media (min-width: 768px) {
+            .timeline-item {
+                padding-left: 30px; /* Restore original padding for larger screens */
+            }
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            background-color: #45b7d1;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px #45b7d1;
+            /* Adjust position for mobile if padding changes */
+            left: -5px; /* Adjust based on new padding-left */
+        }
+        @media (min-width: 768px) {
+            .timeline-item::before {
+                left: 0; /* Restore original position for larger screens */
+            }
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 15px;
+            bottom: -15px;
+            width: 2px;
+            background-color: #ccc;
+            /* Adjust position for mobile if padding changes */
+            left: 0px; /* Adjust based on new padding-left */
+        }
+        @media (min-width: 768px) {
+            .timeline-item::after {
+                left: 5px; /* Restore original position for larger screens */
+            }
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .experience-toggle {
+            cursor: pointer;
+            color: #45b7d1;
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+            transition: transform 0.2s ease-in-out;
+            /* Ensure touch target is large enough */
+            padding: 0.5rem; /* Increase clickable area */
+        }
+        .experience-toggle:hover {
+            transform: scale(1.1);
+        }
+        .experience-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            opacity: 0;
+        }
+        .experience-details.open {
+            max-height: 1500px; /* Increased to accommodate more content, especially on small screens where text wraps more */
+            opacity: 1;
+        }
+
+        .exp-subheading {
+            font-size: 1.25rem; /* Equivalent to text-xl */
+            font-weight: 600; /* Equivalent to font-semibold */
+            color: #334155; /* Equivalent to text-slate-700 */
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .exp-subheading i {
+            margin-right: 0.5rem;
+            color: #45b7d1; /* A matching color for icons */
+        }
+
+        /* Responsive font sizes for headings */
+        h1 { font-size: 2.5rem; } /* Default for mobile */
+        @media (min-width: 768px) { h1 { font-size: 3.5rem; } } /* md:text-4xl */
+        @media (min-width: 1024px) { h1 { font-size: 4rem; } } /* lg:text-5xl */
+
+        h2 { font-size: 2rem; } /* Default for mobile */
+        @media (min-width: 768px) { h2 { font-size: 2.5rem; } } /* md:text-3xl */
+        @media (min-width: 1024px) { h2 { font-size: 3rem; } } /* lg:text-4xl */
+
+        h3 { font-size: 1.5rem; } /* Default for mobile */
+        @media (min-width: 768px) { h3 { font-size: 1.75rem; } } /* md:text-xl */
+        @media (min-width: 1024px) { h3 { font-size: 2rem; } } /* lg:text-2xl */
+
+        /* Adjusting text sizes for better readability on small screens */
+        .text-lg { font-size: 1rem; } /* Smaller base text for mobile */
+        @media (min-width: 768px) { .text-lg { font-size: 1.125rem; } } /* md:text-lg */
+
+        .text-xl { font-size: 1.125rem; } /* Smaller base text for mobile */
+        @media (min-width: 768px) { .text-xl { font-size: 1.25rem; } } /* md:text-xl */
+
+        .download-button {
+            background-color: #fff;
+            color: #45b7d1;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Fully rounded */
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .download-button:hover {
+            background-color: #e0f2f7;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .download-button i {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-teal-500 text-white py-8 md:py-12 rounded-b-3xl shadow-lg">
+        <div class="container flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+            
+<div class="mb-4 md:mb-0 fade-in flex flex-col items-center md:items-start">
+    <img src="Eve.PNG" alt="Evelyn Henry" class="w-32 h-32 rounded-full shadow-lg mb-4 border-4 border-white object-cover">
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-wide mb-1 md:mb-2">Evelyn Henry</h1>
+    <p class="text-lg md:text-xl font-light opacity-90">Senior Regulatory Affairs Specialist | IVD & Medical Device Expert</p>
+    <p class="text-md md:text-lg font-light opacity-80 mt-0.5 md:mt-1">FDA/Health Canada Compliance</p>
+</div>
+
+            <div class="fade-in delay-1 flex flex-col items-center md:flex-row justify-center mt-4 md:mt-0">
+                <div class="flex mb-4 md:mb-0 md:mr-6">
+                    <a href="mailto:evelynhenry75@yahoo.com" class="text-white hover:text-blue-200 mx-2 text-xl md:text-2xl"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/evelynhenry" target="_blank" class="text-white hover:text-blue-200 mx-2 text-xl md:text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="tel:+16367931977" class="text-white hover:text-blue-200 mx-2 text-xl md:text-2xl"><i class="fas fa-phone"></i></a>
+                </div>
+                <a href="https://drive.google.com/uc?export=download&id=1kZ5MfnsoGYIoeWqV1vfSBK0-HAFOfubo" target="_blank" rel="noopener noreferrer" class="download-button fade-in delay-2">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="py-8 md:py-16 bg-white rounded-xl shadow-md my-6 md:my-8 mx-auto container fade-in delay-2">
+        <div class="container">
+            
+<h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6 md:mb-8 animated-gradient bg-clip-text text-transparent">Professional Summary</h2>
+<p class="text-base md:text-lg leading-relaxed text-gray-700 text-center max-w-3xl mx-auto px-2">
+<strong>Strategic Regulatory Affairs Leader</strong> with 20+ years of expertise ensuring FDA, Health Canada, and ISO 13485/9001 compliance for in-vitro diagnostics (IVD), medical devices, and pharmaceuticals. Proven ability to accelerate approvals, reduce CAPA costs by 79%, and lead 15+ successful FDA 510(k) submissions, consistently cutting time-to-market by 30%.
+</p>
+<p class="text-base md:text-lg leading-relaxed text-gray-700 text-center max-w-3xl mx-auto px-2 mt-4">
+Specialized in transforming complex regulations into competitive advantages through digital QMS solutions (QT9, Veeva Vault), automated workflows, and North American regulatory strategies. Trusted by global teams for delivering 100% audit readiness, resolving Health Authority queries with 100% on-time responses, and optimizing post-market surveillance to ensure long-term product success.
+</p>
+<ul class="list-disc list-inside text-gray-700 text-left max-w-3xl mx-auto px-6 mt-4 space-y-2">
+<li><strong>Regulatory Submissions & Compliance:</strong> Expertise in eCTD filings, labeling compliance, and global registrations (U.S./Canada/EU).</li>
+<li><strong>Process Optimization:</strong> Digitized workflows to eliminate errors, reduce CAPA delays by 40%, and slash documentation review time by 90%.</li>
+<li><strong>IVD & Medical Device Leadership:</strong> Managed CE Technical Files, clinical performance evaluations, and risk assessments (ISO 14971) for 200+ products.</li>
+<li><strong>Cross-Functional Collaboration:</strong> Aligned R&D, Marketing, and Legal teams to streamline approvals and drive market-ready innovations.</li>
+</ul>
+<p class="text-base md:text-lg leading-relaxed text-gray-700 text-center max-w-3xl mx-auto px-2 mt-4">
+Adept at training teams, mentoring QA professionals, and leveraging data-driven insights to turn regulatory challenges into scalable business opportunities.
+</p>
+
+</section>
+
+    <!-- Core Competencies & Technical Skills -->
+    <section class="py-8 md:py-16 container">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-10 animated-gradient bg-clip-text text-transparent fade-in delay-3">Core Competencies & Technical Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div class="skill-item blue fade-in delay-4">
+                <h3 class="text-xl md:text-2xl font-semibold mb-2 text-blue-700">Regulatory Compliance & Submissions</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>FDA 21 CFR 210/211/820</li>
+                    <li>Health Canada Regulations</li>
+                    <li>IVD Compliance (FDA/Health Canada/ISO 13485)</li>
+                    <li>eCTD Submissions | Veeva Vault</li>
+                    <li>North American Regulatory Strategy</li>
+                    <li>Labeling Compliance | Global Registrations (US/Canada/EU)</li>
+                </ul>
+            </div>
+            <div class="skill-item green fade-in delay-5">
+                <h3 class="text-xl md:text-2xl font-semibold mb-2 text-green-700">Quality Assurance & Risk Management</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Quality Management Systems (QMS)</li>
+                    <li>CAPA Management | Root Cause Analysis</li>
+                    <li>FDA/ISO Audits | GxP (GMP, GLP, GDP)</li>
+                    <li>Post-Market Vigilance (IVD)</li>
+                    <li>Deviation Investigations | Risk Management (ISO 14971)</li>
+                </ul>
+            </div>
+            <div class="skill-item red fade-in delay-6">
+                <h3 class="text-xl md:text-2xl font-semibold mb-2 text-red-700">IVD-Specific Expertise</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>In-Vitro Diagnostic (IVD) Submissions</li>
+                    <li>Technical Documentation for IVDs</li>
+                    <li>CE Technical Files | Product Lifecycle Management (IVD)</li>
+                    <li>Clinical Performance Evaluation</li>
+                </ul>
+            </div>
+            <div class="skill-item yellow fade-in delay-4">
+                <h3 class="text-xl md:text-2xl font-semibold mb-2 text-yellow-700">Process & Documentation Excellence</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Technical Writing (SOPs, Protocols, Reports)</li>
+                    <li>Regulatory Database Management</li>
+                    <li>CMC Documentation | Data Analysis</li>
+                    <li>Lean/Six Sigma for Compliance</li>
+                </ul>
+            </div>
+            <div class="skill-item blue fade-in delay-5">
+                <h3 class="text-xl md:text-2xl font-semibold mb-2 text-blue-700">Leadership & Collaboration</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Cross-Functional Team Leadership (R&D/Marketing/Legal)</li>
+                    <li>Regulatory Training Programs</li>
+                    <li>Stakeholder Communication | Health Authority Interactions</li>
+                    <li>Project Management for IVD Launches</li>
+                </ul>
+            </div>
+            <div class="skill-item green fade-in delay-6">
+                <h3 class="text-xl md:text-2xl font-semibold mb-2 text-green-700">Technical Tools & Industry Expertise</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Microsoft Office Suite | SAP | QUMAS | QT9 QMS</li>
+                    <li>Smartsheet | IVD Products | Medical Devices | Pharmaceuticals</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Highlights -->
+    <section class="py-8 md:py-16 bg-white rounded-xl shadow-md my-6 md:my-8 mx-auto container">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-10 animated-gradient bg-clip-text text-transparent fade-in">Career Highlights</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-2">
+            <div class="p-4 md:p-6 bg-blue-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-1">
+                <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-medal mr-2 md:mr-3"></i>Regulatory Excellence</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Achieved ISO 13485 certification for IVD products.</li>
+                    <li>Reduced CAPA-related costs by 79% while maintaining 100% FDA/Health Canada compliance.</li>
+                    <li>Spearheaded 5+ successful FDA 510(k) submissions, accelerating time-to-market.</li>
+                </ul>
+            </div>
+            <div class="p-4 md:p-6 bg-green-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-2">
+                <h3 class="text-xl md:text-2xl font-semibold text-green-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-laptop-code mr-2 md:mr-3"></i>Digital Transformation</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Led paper-to-digital transition (QT9 QMS, Veeva Vault) achieving 100% error reduction.</li>
+                    <li>Real-time tracking of FDA/Health Canada submissions via Smartsheet.</li>
+                    <li>40% faster audit readiness through automated workflows.</li>
+                </ul>
+            </div>
+            <div class="p-4 md:p-6 bg-red-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-3">
+                <h3 class="text-xl md:text-2xl font-semibold text-red-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-users mr-2 md:mr-3"></i>North American Leadership</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Developed standardized regulatory procedures for US/Canada IVD submissions.</li>
+                    <li>Designed and delivered compliance training for 50+ QA/RA professionals (50% onboarding time reduction).</li>
+                    <li>Resolved 15+ health authority queries with 100% on-time response rate as FDA/Health Canada liaison.</li>
+                </ul>
+            </div>
+            <div class="p-4 md:p-6 bg-yellow-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-4">
+                <h3 class="text-xl md:text-2xl font-semibold text-yellow-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-lightbulb mr-2 md:mr-3"></i>Process Optimization</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>Spearheaded IVD compliance at Sigma Aldrich with QUMAS, reducing document review time from 2 weeks to 2 days.</li>
+                    <li>Cut CAPA costs by 79% by digitizing workflows with QT9 QMS, eliminating paper-based errors.</li>
+                    <li>Developed Smartsheet-powered eQMS that boosted CAPA adherence to 100% and reduced corrective action delays by 40%.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="py-8 md:py-16 container">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-10 animated-gradient bg-clip-text text-transparent fade-in">Professional Experience</h2>
+        <div class="max-w-4xl mx-auto">
+            <!-- Amgen -->
+            <div class="timeline-item fade-in delay-1">
+                <div class="flex items-center flex-wrap">
+                    <h3 class="text-xl md:text-2xl font-semibold text-blue-600 mb-1 md:mb-0">Senior Regulatory Affairs Associate</h3>
+                    <i class="fas fa-plus-circle experience-toggle ml-2 md:ml-3" data-target="amgen-details"></i>
+                </div>
+                <p class="text-base md:text-lg text-gray-700">Amgen (contractor for Ampcus) | Thousand Oaks</p>
+                <p class="text-sm md:text-md text-gray-600 mb-2">June 2022 - June 2025</p>
+                <div id="amgen-details" class="experience-details">
+                    <h4 class="exp-subheading"><i class="fas fa-globe"></i>Regulatory Strategy & Compliance</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Orchestrated North American regulatory strategy for 15+ IVD/biopharma products, ensuring compliance with FDA 21 CFR 820 and Health Canada requirements through Veeva Vault RIM, reducing approval timelines by 30% while maintaining 100% submission accuracy for eCTD filings.</li>
+                        <li>Led post-market regulatory strategy, maintaining 200+ approved applications through amendments/supplements (CBE-0/30) while leveraging user feedback to drive product enhancements and compliance.</li>
+                    </ul>
+                    <h4 class="exp-subheading"><i class="fas fa-cogs"></i>CMC & Process Optimization</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Served as CMC regulatory SME, providing technical guidance on manufacturing processes and labeling changes to cross-functional teams, reducing review cycles by 40% for US/international markets.</li>
+                        <li>Automated regulatory workflows in Veeva (eQMS/CAPA), becoming the "single source of truth" for submissions and cutting deviation resolution time by 50% through real-time tracking.</li>
+                        <li>Collaborated with global leads to execute complex CMC projects, assessing reportability of changes and ensuring timely submissions across 5 therapeutic areas.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Meridian Medical Technologies (Pfizer) - Senior Complaint Investigator -->
+            <div class="timeline-item fade-in delay-2">
+                <div class="flex items-center flex-wrap">
+                    <h3 class="text-xl md:text-2xl font-semibold text-teal-600 mb-1 md:mb-0">Senior Complaint Investigator</h3>
+                    <i class="fas fa-plus-circle experience-toggle ml-2 md:ml-3" data-target="meridian-senior-details"></i>
+                </div>
+                <p class="text-base md:text-lg text-gray-700">Meridian Medical Technologies (Pfizer) | St. Louis, MO</p>
+                <p class="text-sm md:text-md text-gray-600 mb-2">June 2020 - March 2021</p>
+                <div id="meridian-senior-details" class="experience-details">
+                    <h4 class="exp-subheading"><i class="fas fa-bug"></i>Complaint & CAPA Management</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Directed FDA/ISO 13485-compliant investigations for 200+ IVD/medical device complaints, implementing CAPA systems that reduced repeat issues by 40% and achieved 95% on-time closure rate through advanced root cause analysis.</li>
+                        <li>Implemented corrective/preventive actions (CAPA) for critical quality issues, reducing repeat complaints by 40% through trend analysis and cross-functional collaboration with QA teams.</li>
+                    </ul>
+                    <h4 class="exp-subheading"><i class="fas fa-chart-line"></i>Reporting & Process Improvement</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Automated complaint tracking system, cutting report generation time by 30% while ensuring 100% compliance with FDA 21 CFR Part 820 and Pfizer quality standards.</li>
+                        <li>Delivered data-driven insights to senior management through monthly trend reports, influencing product improvements and risk mitigation strategies for 15+ medical devices.</li>
+                        <li>Spearheaded expedited complaint resolution process, reducing critical issue escalation time from 72 to 24 hours through Quality Notification Reports and real-time monitoring.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Meridian Medical Technologies (Pfizer) - Compliance Investigator -->
+            <div class="timeline-item fade-in delay-3">
+                <div class="flex items-center flex-wrap">
+                    <h3 class="text-xl md:text-2xl font-semibold text-purple-600 mb-1 md:mb-0">Compliance Investigator</h3>
+                    <i class="fas fa-plus-circle experience-toggle ml-2 md:ml-3" data-target="meridian-compliance-details"></i>
+                </div>
+                <p class="text-base md:text-lg text-gray-700">Meridian Medical Technologies (Pfizer) | St. Louis, MO</p>
+                <p class="text-sm md:text-md text-gray-600 mb-2">July 2019 - May 2020</p>
+                <div id="meridian-compliance-details" class="experience-details">
+                    <h4 class="exp-subheading"><i class="fas fa-shield-alt"></i>Audit & Query Resolution</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Championed proactive compliance strategies for FDA/Health Canada audits, reducing findings by 25% across 3 manufacturing sites while streamlining quality processes for IVD products.</li>
+                        <li>Led cross-functional responses to 15+ health authority queries and audit observations, ensuring 100% on-time submissions while collaborating with Pfizer Global Supply teams.</li>
+                    </ul>
+                    <h4 class="exp-subheading"><i class="fas fa-tasks"></i>Quality Process Streamlining</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Streamlined quality processes by integrating pest control reports into compliance tracking systems, enhancing documentation accuracy and inspection readiness.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Titan Spine LLC -->
+            <div class="timeline-item fade-in delay-4">
+                <div class="flex items-center flex-wrap">
+                    <h3 class="text-xl md:text-2xl font-semibold text-indigo-600 mb-1 md:mb-0">Regulatory Affairs Associate</h3>
+                    <i class="fas fa-plus-circle experience-toggle ml-2 md:ml-3" data-target="titan-details"></i>
+                </div>
+                <p class="text-base md:text-lg text-gray-700">Titan Spine LLC | Mequon, WI</p>
+                <p class="text-sm md:text-md text-gray-600 mb-2">April 2018 - April 2019</p>
+                <div id="titan-details" class="experience-details">
+                    <h4 class="exp-subheading"><i class="fas fa-cloud"></i>Digital QMS Implementation</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Transformed regulatory operations for medical devices/IVDs by implementing cloud-based QT9 QMS, achieving 100% FDA compliance and 79% cost savings through digitized CAPA workflows and documentation control.</li>
+                    </ul>
+                    <h4 class="exp-subheading"><i class="fas fa-check-double"></i>FDA Compliance Initiatives</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Led FDA compliance initiatives, including medical device registration (FURLS), GTIN assignments, and IFU revisions, ensuring 100% adherence to regulatory standards for 15+ products.</li>
+                        <li>Streamlined regulatory documentation, creating and maintaining databases while authoring technical policies that improved departmental efficiency by 30%.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Curium Pharmaceutical LLC -->
+            <div class="timeline-item fade-in delay-5">
+                <div class="flex items-center flex-wrap">
+                    <h3 class="text-xl md:text-2xl font-semibold text-pink-600 mb-1 md:mb-0">Regulatory Affairs Specialist (Contractor)</h3>
+                    <i class="fas fa-plus-circle experience-toggle ml-2 md:ml-3" data-target="curium-details"></i>
+                </div>
+                <p class="text-base md:text-lg text-gray-700">Curium Pharmaceutical LLC | Saint Louis, MO</p>
+                <p class="text-sm md:text-md text-gray-600 mb-2">February 2017 - February 2018</p>
+                <div id="curium-details" class="experience-details">
+                    <h4 class="exp-subheading"><i class="fas fa-file-medical"></i>Submission & Dossier Management</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Masterminded FDA/Health Canada eCTD submissions for 10+ imaging drugs/IVDs, reducing review cycles by 25% through optimized CMC dossiers while maintaining 100% on-time compliance.</li>
+                        <li>Led CMC dossier development and monitored evolving regulations, providing strategic guidance that reduced submission review cycles by 25% for North America Imaging products.</li>
+                    </ul>
+                    <h4 class="exp-subheading"><i class="fas fa-bullhorn"></i>Promotional Compliance</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Directed advertising/promotional compliance as SME, streamlining approval processes for marketing materials and eliminating regulatory rejections through cross-functional collaboration.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Aesculap Inc -->
+            <div class="timeline-item fade-in delay-6">
+                <div class="flex items-center flex-wrap">
+                    <h3 class="text-xl md:text-2xl font-semibold text-orange-600 mb-1 md:mb-0">Complaint Investigator</h3>
+                    <i class="fas fa-plus-circle experience-toggle ml-2 md:ml-3" data-target="aesculap-details"></i>
+                </div>
+                <p class="text-base md:text-lg text-gray-700">Aesculap Inc | St. Louis, MO</p>
+                <p class="text-sm md:text-md text-gray-600 mb-2">July 2015 - January 2017</p>
+                <div id="aesculap-details" class="experience-details">
+                    <h4 class="exp-subheading"><i class="fas fa-tasks"></i>MDR Reporting & Analysis</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Redesigned MDR reporting system for IVD/medical devices under FDA 21 CFR 820, cutting submission time by 35% while ensuring 100% compliance through eSubmitter integration.</li>
+                        <li>Pioneered root cause analysis protocols that decreased repeat complaints by 40%, implementing CAPA plans that enhanced product quality across 3 major product lines.</li>
+                    </ul>
+                    <h4 class="exp-subheading"><i class="fas fa-sync-alt"></i>QA Process Modernization</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Modernized QA processes by revamping 10+ SOPs and creating digital tracking in SAP, improving investigation efficiency by 30% while training 15+ team members on new systems.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Nesher Pharmaceuticals LLC -->
+            <div class="timeline-item fade-in delay-1">
+                <div class="flex items-center flex-wrap">
+                    <h3 class="text-xl md:text-2xl font-semibold text-cyan-600 mb-1 md:mb-0">Quality Assurance Coordinator II (Contractor)</h3>
+                    <i class="fas fa-plus-circle experience-toggle ml-2 md:ml-3" data-target="nesher-details"></i>
+                </div>
+                <p class="text-base md:text-lg text-gray-700">Nesher Pharmaceuticals LLC | Bridgeton, MO</p>
+                <p class="text-sm md:text-md text-gray-600 mb-2">October 2014 - February 2015</p>
+                <div id="nesher-details" class="experience-details">
+                    <h4 class="exp-subheading"><i class="fas fa-flask"></i>GMP Compliance & Validation</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Guaranteed 100% cGMP compliance for drug/IVD manufacturing, reducing deviations by 25% through enhanced process controls and real-time monitoring per FDA 21 CFR 211.</li>
+                        <li>Led process validation initiatives, establishing scientific evidence for consistent product identity, strength, and purity while eliminating cross-contamination risks in manufacturing workflows.</li>
+                        <li>Streamlined QA operations by resolving 30+ production issues monthly, improving documentation accuracy by 40% through real-time monitoring of materials and environmental controls.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Sigma Aldrich Corp -->
+            <div class="timeline-item fade-in delay-2">
+                <div class="flex items-center flex-wrap">
+                    <h3 class="text-xl md:text-2xl font-semibold text-emerald-600 mb-1 md:mb-0">Quality Assurance Specialist</h3>
+                    <i class="fas fa-plus-circle experience-toggle ml-2 md:ml-3" data-target="sigma-aldrich-details"></i>
+                </div>
+                <p class="text-base md:text-lg text-gray-700">Sigma Aldrich Corp | Saint Louis, MO</p>
+                <p class="text-sm md:text-md text-gray-600 mb-2">April 2002 - August 2013</p>
+                <div id="sigma-aldrich-details" class="experience-details">
+                    <h4 class="exp-subheading"><i class="fas fa-file-alt"></i>Document Control & QMS Integration</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Pioneered QUMAS document control system for IVD products, slashing review time from 2 weeks to 2 days while maintaining 100% FDA/ISO 13485 compliance across 15+ global facilities.</li>
+                        <li>Spearheaded SAP QMS integration, reducing corrective action review time by 50% through automated tracking of 500+ annual quality notifications and establishing long-term audit programs for 15+ global facilities.</li>
+                    </ul>
+                    <h4 class="exp-subheading"><i class="fas fa-clipboard-check"></i>Auditing & Technical Documentation</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Led 200+ internal/external audits as Lead Auditor (2008-2012), authored 50+ validation protocols/SOPs, and maintained CE Technical Files for IVD products, ensuring uninterrupted market access.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Sigma Diagnostic, Inc. -->
+            <div class="timeline-item fade-in delay-3">
+                <div class="flex items-center flex-wrap">
+                    <h3 class="text-xl md:text-2xl font-semibold text-red-600 mb-1 md:mb-0">Supervisor / Regulatory Affairs & QA Specialist</h3>
+                    <i class="fas fa-plus-circle experience-toggle ml-2 md:ml-3" data-target="sigma-diagnostic-details"></i>
+                </div>
+                <p class="text-base md:text-lg text-gray-700">Sigma Diagnostic, Inc. | Saint Louis, MO</p>
+                <p class="text-sm md:text-md text-gray-600 mb-2">September 1997 - April 2002</p>
+                <div id="sigma-diagnostic-details" class="experience-details">
+                    <h4 class="exp-subheading"><i class="fas fa-certificate"></i>Global Approvals & Time-to-Market</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Secured FDA approvals and CE Marks for IVD products in 12 countries, reducing time-to-market by 25% through optimized regulatory strategies and labeling compliance.</li>
+                    </ul>
+                    <h4 class="exp-subheading"><i class="fas fa-users-cog"></i>Quality Initiatives & Team Leadership</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                        <li>Led cross-functional quality initiatives, supervising teams and optimizing processes that decreased development costs by 30% while ensuring 100% audit readiness for 50+ client/agency inspections.</li>
+                        <li>Pioneered adverse event reporting systems and technical documentation (IFUs, artwork) while conducting load tests and interfacing with regulators to maintain uninterrupted product commercialization.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="py-8 md:py-16 bg-white rounded-xl shadow-md my-6 md:my-8 mx-auto container">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-10 animated-gradient bg-clip-text text-transparent fade-in">Education & Certifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-2">
+            <div class="p-4 md:p-6 bg-blue-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-1">
+                <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-2 md:mb-3 flex items-center"><i class="fas fa-graduation-cap mr-2 md:mr-3"></i>Education</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li><strong>Bachelor of Arts in Management, Emphasis in Health Relations</strong><br>Webster University, St. Louis (2014)</li>
+                    <li><strong>Associate of Applied Science in Clinical Laboratory Technology</strong><br>Forest Park Community College, St. Louis (1984)</li>
+                </ul>
+            </div>
+            <div class="p-4 md:p-6 bg-green-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-2">
+                <h3 class="text-xl md:text-2xl font-semibold text-green-700 mb-2 md:mb-3 flex items-center"><i class="fas fa-certificate mr-2 md:mr-3"></i>Certifications</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
+                    <li>ISO 13485-BSI Management System (Certificate #4421555-20)</li>
+                    <li>ISO 9001-BSI Management System</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 md:py-8 mt-6 md:mt-8 rounded-t-3xl shadow-inner">
+        <div class="container text-center text-gray-400">
+            <p class="text-sm md:text-base">&copy; 2025 Evelyn Henry. All rights reserved.</p>
+            <div class="mt-3 md:mt-4 flex justify-center">
+                <a href="mailto:evelynhenry75@yahoo.com" class="text-white hover:text-blue-300 mx-1.5 md:mx-2 text-lg md:text-xl"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/evelynhenry" target="_blank" class="text-white hover:text-blue-300 mx-1.5 md:mx-2 text-lg md:text-xl"><i class="fab fa-linkedin"></i></a>
+                <a href="tel:+16367931977" class="text-white hover:text-blue-300 mx-1.5 md:mx-2 text-lg md:text-xl"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.1, // Element is 10% in view
+                rootMargin: "0px 0px -50px 0px" // Adjusts when the observer triggers
+            };
+
+            const appearOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            // Toggle functionality for experience details
+            const toggleButtons = document.querySelectorAll('.experience-toggle');
+
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.dataset.target;
+                    const detailsDiv = document.getElementById(targetId);
+
+                    if (detailsDiv) {
+                        detailsDiv.classList.toggle('open');
+                        if (detailsDiv.classList.contains('open')) {
+                            button.classList.remove('fa-plus-circle');
+                            button.classList.add('fa-minus-circle');
+                        } else {
+                            button.classList.remove('fa-minus-circle');
+                            button.classList.add('fa-plus-circle');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
