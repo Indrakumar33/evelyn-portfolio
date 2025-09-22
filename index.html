@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Evelyn Henry - Senior Regulatory Affairs Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -21,9 +21,7 @@
             padding: 1.5rem;
         }
         @media (min-width: 768px) {
-            .container {
-                padding: 2rem;
-            }
+            .container { padding: 2rem; }
         }
         .fade-in {
             opacity: 0;
@@ -103,9 +101,7 @@
             transition: transform 0.2s ease-in-out;
             padding: 0.5rem;
         }
-        .experience-toggle:hover {
-            transform: scale(1.1);
-        }
+        .experience-toggle:hover { transform: scale(1.1); }
         .experience-details {
             max-height: 0;
             overflow: hidden;
@@ -126,10 +122,7 @@
             display: flex;
             align-items: center;
         }
-        .exp-subheading i {
-            margin-right: 0.5rem;
-            color: #3b82f6;
-        }
+        .exp-subheading i { margin-right: 0.5rem; color: #3b82f6; }
 
         h1 { font-size: 2.5rem; }
         @media (min-width: 768px) { h1 { font-size: 3.5rem; } }
@@ -161,118 +154,93 @@
             align-items: center;
             gap: 0.5rem;
         }
-
         .download-button:hover {
             background-color: #e0f2fe;
             transform: translateY(-2px);
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
+        .download-button i { font-size: 1.1em; }
 
-        .download-button i {
-            font-size: 1.1em;
-        }
-        
         .graph-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-        
         .graph {
             background: #f8fafc;
             padding: 1.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
-        
         .graph h3 {
             font-size: 1.2rem;
             color: #1e40af;
             margin-bottom: 1rem;
             text-align: center;
         }
-        
         .chart-container {
             position: relative;
             height: 250px;
             width: 100%;
         }
-        
+
         .image-representation {
             margin: 2rem 0;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
         .compliance-image {
             background: linear-gradient(135deg, #1e40af, #3b82f6);
             color: white;
             padding: 2rem;
+            border-radius: 12px;
         }
-        
         .compliance-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
-        
         @media (max-width: 768px) {
-            .compliance-content {
-                grid-template-columns: 1fr;
-            }
+            .compliance-content { grid-template-columns: 1fr; }
         }
-        
         .compliance-item {
             background: rgba(255, 255, 255, 0.1);
             padding: 1rem;
             border-radius: 8px;
             text-align: center;
         }
-        
-        .binary-code {
-            font-family: monospace;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            text-align: center;
-            margin-top: 1rem;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-        
+
         .certifications-image {
             background: linear-gradient(135deg, #0ea5e9, #06b6d4);
             color: white;
             padding: 2rem;
+            border-radius: 12px;
         }
-        
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        
         .cert-item {
             background: rgba(255, 255, 255, 0.1);
             padding: 1.5rem 1rem;
             border-radius: 8px;
             text-align: center;
         }
-        
+
         .process-image {
             background: linear-gradient(135deg, #8b5cf6, #a855f7);
             color: white;
             padding: 2rem;
+            border-radius: 12px;
         }
-        
         .process-list {
             list-style: none;
             margin-top: 1.5rem;
         }
-        
         .process-list li {
             padding: 0.8rem;
             background: rgba(255, 255, 255, 0.1);
@@ -281,32 +249,45 @@
             display: flex;
             align-items: center;
         }
-        
         .process-list li:before {
             content: "•";
             margin-right: 10px;
             font-size: 1.5rem;
         }
-        
+
         .documentation-image {
             background: linear-gradient(135deg, #ec4899, #f472b6);
             color: white;
             padding: 2rem;
+            border-radius: 12px;
         }
-        
         .doc-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        
         .doc-item {
             background: rgba(255, 255, 255, 0.1);
             padding: 1.5rem 1rem;
             border-radius: 8px;
             text-align: center;
         }
+
+        /* KW pills */
+        .kw {
+          display: inline-block;
+          padding: 0.35rem 0.7rem;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.12);
+          color: #fff;
+          font-weight: 600;
+          font-size: 0.9rem;
+          border: 1px solid rgba(255,255,255,0.12);
+          backdrop-filter: blur(4px);
+        }
+        .kw:hover { transform: translateY(-2px); transition: transform 0.15s ease; }
+        .sr-only { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
 
         /* Professional Summary Specific Styles */
         .summary-section {
@@ -318,31 +299,32 @@
             position: relative;
             z-index: 10;
         }
-        
-        .summary-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
+        .summary-content { max-width: 900px; margin: 0 auto; }
         .summary-highlights {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
-        
         .highlight-item {
             background: #f8fafc;
             padding: 1.5rem;
             border-radius: 10px;
             border-left: 4px solid #3b82f6;
         }
-        
         .highlight-item h4 {
             font-size: 1.1rem;
             font-weight: 600;
             color: #1e40af;
             margin-bottom: 0.5rem;
+        }
+
+        /* Education & Certification layout tweaks */
+        .edu-item, .cert-item-plain {
+            background: #ffffff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.06);
         }
     </style>
 </head>
@@ -374,38 +356,38 @@
     <!-- Professional Summary - Fixed Section -->
     <section class="container summary-section fade-in delay-2">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6 animated-gradient bg-clip-text text-transparent">Professional Summary</h2>
-        
+
         <div class="summary-content">
             <p class="text-lg text-gray-700 mb-6 text-justify">
                 <strong>Strategic Regulatory Affairs Leader</strong> with 20+ years of expertise ensuring FDA, Health Canada, and ISO 13485/9001 compliance for in-vitro diagnostics (IVD), medical devices, and pharmaceuticals. Proven ability to accelerate approvals, reduce CAPA costs by 79%, and lead 15+ successful FDA 510(k) submissions, consistently cutting time-to-market by 30%.
             </p>
-            
+
             <p class="text-lg text-gray-700 mb-6 text-justify">
                 Specialized in transforming complex regulations into competitive advantages through digital QMS solutions (QT9, Veeva Vault), automated workflows, and North American regulatory strategies. Trusted by global teams for delivering 100% audit readiness, resolving Health Authority queries with 100% on-time responses, and optimizing post-market surveillance to ensure long-term product success.
             </p>
-            
+
             <div class="summary-highlights">
                 <div class="highlight-item">
                     <h4>Regulatory Submissions & Compliance</h4>
                     <p class="text-gray-700">Expertise in eCTD filings, labeling compliance, and global registrations (U.S./Canada/EU).</p>
                 </div>
-                
+
                 <div class="highlight-item">
                     <h4>Process Optimization</h4>
                     <p class="text-gray-700">Digitized workflows to eliminate errors, reduce CAPA delays by 40%, and slash documentation review time by 90%.</p>
                 </div>
-                
+
                 <div class="highlight-item">
                     <h4>IVD & Medical Device Leadership</h4>
                     <p class="text-gray-700">Managed CE Technical Files, clinical performance evaluations, and risk assessments (ISO 14971) for 200+ products.</p>
                 </div>
-                
+
                 <div class="highlight-item">
                     <h4>Cross-Functional Collaboration</h4>
                     <p class="text-gray-700">Aligned R&D, Marketing, and Legal teams to streamline approvals and drive market-ready innovations.</p>
                 </div>
             </div>
-            
+
             <p class="text-lg text-gray-700 mt-6 text-justify">
                 Adept at training teams, mentoring QA professionals, and leveraging data-driven insights to turn regulatory challenges into scalable business opportunities.
             </p>
@@ -417,21 +399,57 @@
         <div class="image-representation compliance-image">
             <h3 class="text-2xl font-bold text-center mb-4">Compliance & Quality Assurance | Digital Transformation | Global Health Compliance</h3>
             <div class="compliance-content">
-                <div class="keywords" aria-hidden="true">
-                <span class="kw">Global Health Compliance</span>
-                <span class="kw">Health Canada</span>
-                <span class="kw">FDA</span>
-                <span class="kw">EMA</span>
-                <span class="kw">ISO 13485</span>
-                <span class="kw">QMS</span>
-                <span class="kw">CAPA</span>
-                <span class="kw">Audit Readiness</span>
-                <span class="kw">Risk Management</span>
-                <span class="kw">SOPs</span>
-                <span class="kw">Digital Transformation</span>
-                <span class="kw">Vendor Management</span>
+                <!-- Left column: bullets + quick stats -->
+                <div>
+                    <p class="text-lg text-white mb-3">
+                        Experienced regulatory leader delivering global submission strategy, QMS transformation, and audit readiness for IVDs and medical devices.
+                    </p>
+
+                    <ul class="list-inside space-y-2 text-white">
+                        <li>Global regulatory experience: FDA, Health Canada, EMA</li>
+                        <li>ISO 13485-certified QMS design & audit readiness</li>
+                        <li>Digital eQMS & submission automation (Veeva, QT9, Smartsheet)</li>
+                    </ul>
+
+                    <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+                        <div>
+                            <div class="text-2xl font-bold">15+</div>
+                            <div class="text-sm">510(k) & regulatory submissions supported</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold">100%</div>
+                            <div class="text-sm">Audit readiness for core product lines</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold">79%</div>
+                            <div class="text-sm">CAPA cost reduction (digitization)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column: keyword pills (visible for humans, ATS-friendly comment below) -->
+                <div>
+                    <div class="mb-2 text-sm text-white opacity-90">Keywords</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="kw">Global Health Compliance</span>
+                      <span class="kw">Health Canada</span>
+                      <span class="kw">FDA</span>
+                      <span class="kw">EMA</span>
+                      <span class="kw">ISO 13485</span>
+                      <span class="kw">QMS</span>
+                      <span class="kw">CAPA</span>
+                      <span class="kw">Audit Readiness</span>
+                      <span class="kw">Risk Management</span>
+                      <span class="kw">SOPs</span>
+                      <span class="kw">Digital Transformation</span>
+                      <span class="kw">Vendor Management</span>
+                    </div>
+
+                    <!-- Hidden ATS-friendly keyword line -->
+                    <p class="sr-only">ATS-KEYWORDS: Global Health Compliance; Health Canada; FDA; EMA; ISO 13485; QMS; CAPA; Audit Readiness; Risk Management; SOPs; Digital Transformation; Vendor Management</p>
+                </div>
             </div>
-           
+        </div>
     </section>
 
     <!-- Performance Graphs Section -->
@@ -444,21 +462,21 @@
                     <canvas id="capaChart"></canvas>
                 </div>
             </div>
-            
+
             <div class="graph">
                 <h3>Monthly Compliance Events</h3>
                 <div class="chart-container">
                     <canvas id="complianceChart"></canvas>
                 </div>
             </div>
-            
+
             <div class="graph">
                 <h3>Audit Findings Trend</h3>
                 <div class="chart-container">
                     <canvas id="auditChart"></canvas>
                 </div>
             </div>
-            
+
             <div class="graph">
                 <h3>Submission Success Rate</h3>
                 <div class="chart-container">
@@ -535,70 +553,82 @@
         <div class="image-representation certifications-image">
             <h3 class="text-2xl font-bold text-center mb-4">CERTIFICATIONS & STANDARDS</h3>
             <div class="cert-grid">
-                <div class="cert-item">NDA</div>
-                <div class="cert-item">FMA</div>
-                <div class="cert-item">ISO 9001</div>
+                <div class="cert-item">RAC (Regulatory Affairs Certification)</div>
                 <div class="cert-item">ISO 13485</div>
-                <div class="cert-item">510(k)</div>
+                <div class="cert-item">ISO 9001</div>
                 <div class="cert-item">ISO 14001</div>
+                <div class="cert-item">510(k)</div>
+                <div class="cert-item">ISO Lead Auditor</div>
             </div>
         </div>
     </section>
 
-    <!-- Career Highlights -->
+    <!-- Career Highlights (UPDATED) -->
     <section class="py-8 md:py-16 bg-white rounded-xl shadow-md my-6 md:my-8 mx-auto container">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-10 animated-gradient bg-clip-text text-transparent fade-in">Career Highlights</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-2">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-2">
+            <!-- Operational Excellence -->
             <div class="p-4 md:p-6 bg-blue-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-1">
-                <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-medal mr-2 md:mr-3"></i>Regulatory Excellence</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
-                    <li>Achieved ISO 13485 certification for IVD products.</li>
-                    <li>Reduced CAPA-related costs by 79% while maintaining 100% FDA/Health Canada compliance.</li>
-                    <li>Spearheaded 5+ successful FDA 510(k) submissions, accelerating time-to-market.</li>
+                <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-gear mr-2 md:mr-3"></i>Operational Excellence</h3>
+                <ul class="list-inside text-gray-700 space-y-3 text-sm md:text-base">
+                    <li><strong>Achieved ISO 9001:2008 certification</strong> through comprehensive quality system implementation.</li>
+                    <li><strong>Reduced CAPA-related quality costs by 79%</strong> through innovative process redesign and targeted corrective actions.</li>
                 </ul>
             </div>
+
+            <!-- Digital Transformation -->
             <div class="p-4 md:p-6 bg-green-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-2">
                 <h3 class="text-xl md:text-2xl font-semibold text-green-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-laptop-code mr-2 md:mr-3"></i>Digital Transformation</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
-                    <li>Led paper-to-digital transition (QT9 QMS, Veeva Vault) achieving 100% error reduction.</li>
-                    <li>Real-time tracking of FDA/Health Canada submissions via Smartsheet.</li>
-                    <li>40% faster audit readiness through automated workflows.</li>
+                <ul class="list-inside text-gray-700 space-y-3 text-sm md:text-base">
+                    <li><strong>Spearheaded paper-to-digital transition of CAPA system</strong>, achieving:
+                        <ul class="list-disc list-inside ml-4">
+                            <li>100% error reduction (exceeding 80% target)</li>
+                            <li>100% process adherence (surpassing 80% goal)</li>
+                        </ul>
+                    </li>
+                    <li>Enabled real-time tracking via Smartsheet implementation for improved transparency and faster decision-making.</li>
                 </ul>
             </div>
+
+            <!-- Organizational Leadership -->
             <div class="p-4 md:p-6 bg-red-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-3">
-                <h3 class="text-xl md:text-2xl font-semibold text-red-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-users mr-2 md:mr-3"></i>North American Leadership</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
-                    <li>Developed standardized regulatory procedures for US/Canada IVD submissions.</li>
-                    <li>Designed and delivered compliance training for 50+ QA/RA professionals (50% onboarding time reduction).</li>
-                    <li>Resolved 15+ health authority queries with 100% on-time response rate as FDA/Health Canada liaison.</li>
-                </ul>
-            </div>
-            <div class="p-4 md:p-6 bg-yellow-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-4">
-                <h3 class="text-xl md:text-2xl font-semibold text-yellow-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-lightbulb mr-2 md:mr-3"></i>Process Optimization</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
-                    <li>Spearheaded IVD compliance at Sigma Aldrich with QUMAS, reducing document review time from 2 weeks to 2 days.</li>
-                    <li>Cut CAPA costs by 79% by digitizing workflows with QT9 QMS, eliminating paper-based errors.</li>
-                    <li>Developed Smartsheet-powered eQMS that boosted CAPA adherence to 100% and reduced corrective action delays by 40%.</li>
+                <h3 class="text-xl md:text-2xl font-semibold text-red-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-users mr-2 md:mr-3"></i>Organizational Leadership</h3>
+                <ul class="list-inside text-gray-700 space-y-3 text-sm md:text-base">
+                    <li>Developed a standardized departmental procedures manual to ensure consistent, compliant operations across locations.</li>
+                    <li>Designed and implemented targeted training programs addressing organizational needs and reducing onboarding time by up to 50%.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Process Optimization Image -->
-    <section class="fade-in delay-1 container">
-        <div class="image-representation process-image">
-            <h3 class="text-2xl font-bold text-center mb-4">PROCESS OPTIMIZATION</h3>
-            <ul class="process-list">
-                <li>Core generating</li>
-                <li>Debugging</li>
-                <li>Open Java base</li>
-                <li>Human browser block</li>
-                <li>Disk launch</li>
-            </ul>
+    <!-- Documentation & Submissions (includes ISO standards) -->
+    <section class="fade-in container">
+        <div class="image-representation documentation-image">
+            <h3 class="text-2xl font-bold text-center mb-4">DOCUMENTATION & SUBMISSIONS</h3>
+            <div class="doc-grid">
+                <div class="doc-item">SOP</div>
+                <div class="doc-item">NDA</div>
+                <div class="doc-item">ANDA</div>
+                <div class="doc-item">510(k)</div>
+                <div class="doc-item">eCTD</div>
+                <div class="doc-item">MAA</div>
+            </div>
+
+            <div class="mt-6">
+                <h4 class="text-lg font-semibold mb-2">Relevant ISO Standards</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div class="doc-item">ISO 19011</div>
+                    <div class="doc-item">ISO 17012</div>
+                    <div class="doc-item">ISO 17021</div>
+                    <div class="doc-item">ISO 11064</div>
+                </div>
+                <p class="mt-3 text-white opacity-90 text-sm">Included per client request: ISO standards relevant to audits, conformity assessment, and ergonomic design for regulated environments.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Professional Experience -->
+    <!-- Professional Experience (COMPLETE) -->
     <section class="py-8 md:py-16 container">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-10 animated-gradient bg-clip-text text-transparent fade-in">Professional Experience</h2>
         <div class="max-w-4xl mx-auto">
@@ -624,6 +654,7 @@
                     </ul>
                 </div>
             </div>
+
             <!-- Meridian Medical Technologies (Pfizer) - Senior Complaint Investigator -->
             <div class="timeline-item fade-in delay-2">
                 <div class="flex items-center flex-wrap">
@@ -646,6 +677,7 @@
                     </ul>
                 </div>
             </div>
+
             <!-- Meridian Medical Technologies (Pfizer) - Compliance Investigator -->
             <div class="timeline-item fade-in delay-3">
                 <div class="flex items-center flex-wrap">
@@ -666,6 +698,7 @@
                     </ul>
                 </div>
             </div>
+
             <!-- Titan Spine LLC -->
             <div class="timeline-item fade-in delay-4">
                 <div class="flex items-center flex-wrap">
@@ -687,6 +720,7 @@
                     </ul>
                 </div>
             </div>
+
             <!-- Sigma Aldrich -->
             <div class="timeline-item fade-in delay-5">
                 <div class="flex items-center flex-wrap">
@@ -711,39 +745,33 @@
         </div>
     </section>
 
-    <!-- Documentation Image -->
-    <section class="fade-in delay-1 container">
-        <div class="image-representation documentation-image">
-            <h3 class="text-2xl font-bold text-center mb-4">DOCUMENTATION & SUBMISSIONS</h3>
-            <div class="doc-grid">
-                <div class="doc-item">SOP</div>
-                <div class="doc-item">NDA</div>
-                <div class="doc-item">ANDA</div>
-                <div class="doc-item">510(K)</div>
-                <div class="doc-item">eCTD</div>
-                <div class="doc-item">MAA</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Certifications -->
+    <!-- Education & Certifications (UPDATED) -->
     <section class="py-8 md:py-16 bg-white rounded-xl shadow-md my-6 md:my-8 mx-auto container fade-in delay-3">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-10 animated-gradient bg-clip-text text-transparent">Education & Certifications</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-2">
-            <div class="p-4 md:p-6 bg-blue-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-4">
+            <!-- EDUCATION -->
+            <div class="edu-item fade-in delay-4">
                 <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-graduation-cap mr-2 md:mr-3"></i>Education</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
-                    <li><strong>Master of Science (M.S.), Regulatory Affairs</strong> - St. Cloud State University, MN</li>
-                    <li><strong>Bachelor of Science (B.S.), Biology</strong> - University of Missouri, St. Louis</li>
-                </ul>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <strong>Bachelor of Arts in Management, Emphasis in Health Relations</strong><br/>
+                        Webster University — <span class="font-medium">2014</span><br/>
+                        St. Louis
+                    </div>
+                    <div>
+                        <strong>Associate of Applied Science in Clinical Laboratory Technology</strong><br/>
+                        Forest Park Community College — <span class="font-medium">1984</span><br/>
+                        St. Louis
+                    </div>
+                </div>
             </div>
-            <div class="p-4 md:p-6 bg-green-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in delay-5">
+
+            <!-- CERTIFICATIONS -->
+            <div class="cert-item-plain fade-in delay-5">
                 <h3 class="text-xl md:text-2xl font-semibold text-green-700 mb-3 md:mb-4 flex items-center"><i class="fas fa-certificate mr-2 md:mr-3"></i>Certifications</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
-                    <li><strong>Regulatory Affairs Certification (RAC)</strong> - Regulatory Affairs Professionals Society (RAPS)</li>
-                    <li><strong>ISO 13485:2016 Lead Auditor</strong> - Exemplar Global</li>
-                    <li><strong>Certified Quality Auditor (CQA)</strong> - American Society for Quality (ASQ)</li>
-                    <li><strong>Lean Six Sigma Green Belt</strong> - ASQ</li>
+                <ul class="list-inside text-gray-700 space-y-3 text-sm md:text-base">
+                    <li><strong>ISO 13485 – BSI Management System</strong> (Certificate #4421555-20)</li>
+                    <li><strong>ISO 9001 – BSI Management System</strong></li>
                 </ul>
             </div>
         </div>
@@ -784,7 +812,7 @@
                 const targetId = toggle.getAttribute('data-target');
                 const details = document.getElementById(targetId);
                 details.classList.toggle('open');
-                
+
                 if (details.classList.contains('open')) {
                     toggle.classList.remove('fa-plus-circle');
                     toggle.classList.add('fa-minus-circle');
@@ -798,127 +826,118 @@
         // Charts initialization
         window.addEventListener('load', () => {
             // CAPA Resolution Time Chart
-            const capaCtx = document.getElementById('capaChart').getContext('2d');
-            new Chart(capaCtx, {
-                type: 'line',
-                data: {
-                    labels: ['Q1 2022', 'Q2 2022', 'Q3 2022', 'Q4 2022', 'Q1 2023', 'Q2 2023', 'Q3 2023', 'Q4 2023'],
-                    datasets: [{
-                        label: 'Days to Resolution',
-                        data: [45, 42, 38, 35, 32, 28, 25, 22],
-                        borderColor: '#3b82f6',
-                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
-                        tension: 0.3,
-                        fill: true
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'Days'
+            const capaCtx = document.getElementById('capaChart')?.getContext('2d');
+            if (capaCtx) {
+                new Chart(capaCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Q1 2022', 'Q2 2022', 'Q3 2022', 'Q4 2022', 'Q1 2023', 'Q2 2023', 'Q3 2023', 'Q4 2023'],
+                        datasets: [{
+                            label: 'Days to Resolution',
+                            data: [45, 42, 38, 35, 32, 28, 25, 22],
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: { display: true, text: 'Days' }
                             }
                         }
                     }
-                }
-            });
+                });
+            }
 
             // Monthly Compliance Events Chart
-            const complianceCtx = document.getElementById('complianceChart').getContext('2d');
-            new Chart(complianceCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                    datasets: [{
-                        label: 'Compliance Events',
-                        data: [12, 15, 9, 11, 8, 7, 6, 5, 8, 6, 4, 3],
-                        backgroundColor: '#10b981',
-                        borderColor: '#047857',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'Events'
+            const complianceCtx = document.getElementById('complianceChart')?.getContext('2d');
+            if (complianceCtx) {
+                new Chart(complianceCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        datasets: [{
+                            label: 'Compliance Events',
+                            data: [12, 15, 9, 11, 8, 7, 6, 5, 8, 6, 4, 3],
+                            backgroundColor: '#10b981',
+                            borderColor: '#047857',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: { display: true, text: 'Events' }
                             }
                         }
                     }
-                }
-            });
+                });
+            }
 
             // Audit Findings Trend Chart
-            const auditCtx = document.getElementById('auditChart').getContext('2d');
-            new Chart(auditCtx, {
-                type: 'line',
-                data: {
-                    labels: ['2020', '2021', '2022', '2023', '2024'],
-                    datasets: [{
-                        label: 'Major Findings',
-                        data: [8, 6, 4, 3, 2],
-                        borderColor: '#ef4444',
-                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
-                        tension: 0.3,
-                        fill: true
-                    }, {
-                        label: 'Minor Findings',
-                        data: [15, 12, 10, 8, 6],
-                        borderColor: '#f59e0b',
-                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
-                        tension: 0.3,
-                        fill: true
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'Findings'
+            const auditCtx = document.getElementById('auditChart')?.getContext('2d');
+            if (auditCtx) {
+                new Chart(auditCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2020', '2021', '2022', '2023', '2024'],
+                        datasets: [{
+                            label: 'Major Findings',
+                            data: [8, 6, 4, 3, 2],
+                            borderColor: '#ef4444',
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        }, {
+                            label: 'Minor Findings',
+                            data: [15, 12, 10, 8, 6],
+                            borderColor: '#f59e0b',
+                            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: { display: true, text: 'Findings' }
                             }
                         }
                     }
-                }
-            });
+                });
+            }
 
             // Submission Success Rate Chart
-            const submissionCtx = document.getElementById('submissionChart').getContext('2d');
-            new Chart(submissionCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Approved', 'Pending', 'Rejected'],
-                    datasets: [{
-                        data: [92, 5, 3],
-                        backgroundColor: [
-                            '#10b981',
-                            '#f59e0b',
-                            '#ef4444'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
-                        }
+            const submissionCtx = document.getElementById('submissionChart')?.getContext('2d');
+            if (submissionCtx) {
+                new Chart(submissionCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Approved', 'Pending', 'Rejected'],
+                        datasets: [{
+                            data: [92, 5, 3],
+                            backgroundColor: ['#10b981', '#f59e0b', '#ef4444'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { position: 'bottom' } }
                     }
-                }
-            });
+                });
+            }
         });
     </script>
 </body>
